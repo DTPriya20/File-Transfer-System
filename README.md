@@ -37,5 +37,56 @@ All uploaded files are tracked via `file_index.txt`, and every upload/download o
 - **Supports All File Types:** You can upload any file type (text, PDFs, media, etc.) as long as the path is valid.
 
 ---
+# 🔐 SHA256 Integrity Verification using OpenSSL
+
+This system ensures **data integrity and tamper detection** for every uploaded and downloaded file using **SHA256 cryptographic hashing**, implemented via the OpenSSL library.
+
+---
+
+## 📌 What is SHA256?
+
+SHA256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function that converts data into a fixed 256-bit (64-character hexadecimal) string. Any change in the input — even a single byte — will produce a completely different hash. This makes it ideal for **detecting tampering or corruption**.
+
+---
+
+## 🔍 How It Works in This Project
+
+### 🟡 **Before Upload (Client Side):**
+- The file selected for upload is opened and read in chunks.
+- Using OpenSSL's hashing functions, the **SHA256 hash is computed**.
+- The file is then sent to the server **along with the hash string**.
+
+### 🔵 **On the Server:**
+- The server receives the uploaded file and stores it securely.
+- It also keeps a record of the **client-computed SHA256 hash** associated with that file.
+- This hash is stored in memory or logged in `file_index.txt` for later verification.
+
+### 🟢 **During Download (Client Side):**
+1. The user requests a file to download.
+2. The server checks access permissions and sends the file **and its original SHA256 hash** to the client.
+3. The client:
+   - Saves the file locally.
+   - **Recomputes the SHA256 hash** of the received file.
+   - **Compares it** to the server-provided hash.
+4. The result is displayed:
+   - ✅ **Integrity: OK** if the hashes match.
+   - ❌ **Integrity: MISMATCH** if the file has been altered or corrupted.
+
+---
+
+## 🧪 OpenSSL Functions Used
+
+This implementation uses OpenSSL’s `EVP` interface for digest computation:
+
+```c
+EVP_MD_CTX* ctx = EVP_MD_CTX_new();
+EVP_DigestInit_ex(ctx, EVP_sha256(), NULL);
+
+while ((n = fread(buf, 1, sizeof(buf), fp)) > 0)
+    EVP_DigestUpdate(ctx, buf, n);
+
+EVP_DigestFinal_ex(ctx, hash, &len);
+EVP_MD_CTX_free(ctx);
+
 
 
