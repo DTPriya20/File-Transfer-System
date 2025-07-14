@@ -1,0 +1,18 @@
+[UPLOAD] diti uploads/213354_ 0B 0.00sec 0.00KB/s FAIL
+[UPLOAD] diti uploads/214555_test.txt 0B 0.00sec 0.00KB/s OK
+[UPLOAD] dtpriya uploads/222010_ 0B 0.00sec 0.00KB/s FAIL
+[DOWNLOAD] dtpriya uploads/214555_test.txt 0B
+[UPLOAD] dtpriya uploads/210047_ 0B 0.00sec 0.00KB/s FAIL
+[UPLOAD] dtpriya uploads/230140_ 0B 0.00sec 0.00KB/s FAIL
+[UPLOAD] dtpriya uploads/dtpriya/231832_ 0B 0.00s 0.00KB/s [HASH!]
+[UPLOAD] dtpriya uploads/dtpriya/232108_ 0B 0.00s 0.00KB/s [HASH!]
+[UPLOAD] dtpriya uploads/dtpriya/233115_ 0B 0.00s 0.00KB/s [HASH!]
+[UPLOAD] dtpriya uploads/dtpriya/234053_ 0B 0.00s 0.00KB/s [HASH!]
+[UPLOAD] dtpriya uploaded uploads/dtpriya/234829_Set_D.pdf (64465B) 0.00s 77529.68KB/s [OK]
+[DOWNLOAD] dtpriya uploads/dtpriya/234829_Set_D.pdf 64465B
+[UPLOAD] dtpriya uploaded uploads/dtpriya/001150_Set_D.pdf (64465B) 0.00s 127955.49KB/s [OK]
+[DOWNLOAD] dtpriya uploads/dtpriya/001150_Set_D.pdf 64465B
+[UPLOAD] dtpriya uploaded uploads/dtpriya/001300_Set_D.pdf (64465B) 0.00s 107430.21KB/s [OK]
+[DOWNLOAD] titli downloaded uploads/dtpriya/001150_Set_D.pdf (64465B)
+[DOWNLOAD] dtpriya downloaded uploads/dtpriya/001300_Set_D.pdf (64465B)
+[DOWNLOAD] dtpriya downloaded uploads/dtpriya/001300_Set_D.pdf (64465B)
