@@ -1,0 +1,4 @@
+# Ignore auto-generated files
+server/users.txt
+server/logs.txt
+server/file_index.txt
